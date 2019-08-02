@@ -42,7 +42,7 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     search: {
       root: '/',
       path: ''
@@ -202,9 +202,39 @@
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
     </ul>
     
 
+    <div class="site-search">
+      
+  <div class="algolia-popup popup search-popup">
+  <div class="algolia-search">
+    <div class="algolia-search-input-icon">
+      <i class="fa fa-search"></i>
+    </div>
+    <div class="algolia-search-input" id="algolia-search-input"></div>
+  </div>
+
+  <div class="algolia-results">
+    <div id="algolia-stats"></div>
+    <div id="algolia-hits"></div>
+    <div id="algolia-pagination" class="algolia-pagination"></div>
+  </div>
+
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+
+
+
+    </div>
 </nav>
 
 </div>
@@ -265,6 +295,15 @@
             </span>
           
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon"
+              >
+                <i class="fa fa-eye"></i>
+                 阅读次数： 
+                <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+              </span>
+            </span>
           <br>
 
         </div>
@@ -464,6 +503,25 @@
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.3.0</div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
 
 
 
@@ -487,11 +545,10 @@
     
     
   
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script src="/lib/jquery/index.js?v=3.4.1"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  <script defer src="/lib/three/three.min.js"></script>
-  <script defer src="/lib/three/canvas_lines.min.js"></script>
 
   <script src="/js/utils.js?v=7.3.0"></script>
   <script src="/js/motion.js?v=7.3.0"></script>
@@ -537,6 +594,14 @@
 
 
 
+
+
+  
+<link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+<script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+
+
+<script src="/js/algolia-search.js?v=7.3.0"></script>
 
 
 
