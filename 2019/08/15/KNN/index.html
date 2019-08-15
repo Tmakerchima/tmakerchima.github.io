@@ -57,21 +57,21 @@
   };
 </script>
 
-  <meta name="description" content="Tensorflow是什么English versionChinese version 附带一个本次机器学习的例子tf.train API一个简单的线性回归    import numpy as np    import tensorflow as tf #Model parameters W = tf.Variable([.3], dtype=tf.float32) b = tf.Variabl">
+  <meta name="description" content="KNN是什么K最近邻(k-Nearest Neighbor，KNN)分类算法，是一个理论上比较成熟的方法，也是最简单的机器学习算法之一。该方法的思路是：如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。 KNN算法实现import numpy as np import matplotlib.pyplot as plt  # 初始化模拟">
 <meta name="keywords" content="easy to clee happy life">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习的开始">
-<meta property="og:url" content="http://yoursite.com/2019/08/13/tf_train/index.html">
+<meta property="og:title" content="KNN——机器学习">
+<meta property="og:url" content="http://yoursite.com/2019/08/15/KNN/index.html">
 <meta property="og:site_name" content="saber~">
-<meta property="og:description" content="Tensorflow是什么English versionChinese version 附带一个本次机器学习的例子tf.train API一个简单的线性回归    import numpy as np    import tensorflow as tf #Model parameters W = tf.Variable([.3], dtype=tf.float32) b = tf.Variabl">
+<meta property="og:description" content="KNN是什么K最近邻(k-Nearest Neighbor，KNN)分类算法，是一个理论上比较成熟的方法，也是最简单的机器学习算法之一。该方法的思路是：如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。 KNN算法实现import numpy as np import matplotlib.pyplot as plt  # 初始化模拟">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/08/13/OK694EhMBDtCb7H.png">
-<meta property="og:updated_time" content="2019-08-13T08:51:34.083Z">
+<meta property="og:image" content="https://i.loli.net/2019/08/15/FoXnVIvSkwNmW6E.png">
+<meta property="og:updated_time" content="2019-08-15T05:37:56.739Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习的开始">
-<meta name="twitter:description" content="Tensorflow是什么English versionChinese version 附带一个本次机器学习的例子tf.train API一个简单的线性回归    import numpy as np    import tensorflow as tf #Model parameters W = tf.Variable([.3], dtype=tf.float32) b = tf.Variabl">
-<meta name="twitter:image" content="https://i.loli.net/2019/08/13/OK694EhMBDtCb7H.png">
-  <link rel="canonical" href="http://yoursite.com/2019/08/13/tf_train/">
+<meta name="twitter:title" content="KNN——机器学习">
+<meta name="twitter:description" content="KNN是什么K最近邻(k-Nearest Neighbor，KNN)分类算法，是一个理论上比较成熟的方法，也是最简单的机器学习算法之一。该方法的思路是：如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。 KNN算法实现import numpy as np import matplotlib.pyplot as plt  # 初始化模拟">
+<meta name="twitter:image" content="https://i.loli.net/2019/08/15/FoXnVIvSkwNmW6E.png">
+  <link rel="canonical" href="http://yoursite.com/2019/08/15/KNN/">
 
 
 <script id="page.configurations">
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>机器学习的开始 | saber~</title>
+  <title>KNN——机器学习 | saber~</title>
   
 
 
@@ -246,7 +246,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/tf_train/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/15/KNN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="machi">
@@ -260,7 +260,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">机器学习的开始
+          <h1 class="post-title" itemprop="name headline">KNN——机器学习
 
               
             
@@ -280,7 +280,7 @@
                 
               
 
-              <time title="创建时间：2019-08-13 16:38:07 / 修改时间：16:51:34" itemprop="dateCreated datePublished" datetime="2019-08-13T16:38:07+08:00">2019-08-13</time>
+              <time title="创建时间：2019-08-15 13:38:04 / 修改时间：13:37:56" itemprop="dateCreated datePublished" datetime="2019-08-15T13:38:04+08:00">2019-08-15</time>
             </span>
           
             
@@ -308,41 +308,52 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Tensorflow是什么"><a href="#Tensorflow是什么" class="headerlink" title="Tensorflow是什么"></a><a href="https://www.tensorflow.org/?hl=zh-Cn" target="_blank" rel="noopener">Tensorflow是什么</a></h2><p><a href="https://github.com/machinelearningmindset/TensorFlow-Course#what-is-tensorflow" target="_blank" rel="noopener">English version</a><br><a href="https://juejin.im/post/5c07f05af265da61171c83d0" target="_blank" rel="noopener">Chinese version</a></p>
-<h3 id="附带一个本次机器学习的例子"><a href="#附带一个本次机器学习的例子" class="headerlink" title="附带一个本次机器学习的例子"></a>附带一个本次机器学习的例子</h3><p>tf.train API<br>一个简单的线性回归<br>    import numpy as np<br>    import tensorflow as tf</p>
-<pre><code>#Model parameters
-W = tf.Variable([.3], dtype=tf.float32)
-b = tf.Variable([-.3], dtype=tf.float32)
-#Model input and output
-x = tf.placeholder(tf.float32)
-linear_model = W * x + b
-y = tf.placeholder(tf.float32)
-#loss
-loss = tf.reduce_sum(tf.square(linear_model - y)) # sum of the squares
+        <h2 id="KNN是什么"><a href="#KNN是什么" class="headerlink" title="KNN是什么"></a>KNN是什么</h2><p>K最近邻(k-Nearest Neighbor，KNN)分类算法，是一个理论上比较成熟的方法，也是最简单的机器学习算法之一。该方法的思路是：如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。<br><img src="https://i.loli.net/2019/08/15/FoXnVIvSkwNmW6E.png" alt="KNN"></p>
+<h2 id="KNN算法实现"><a href="#KNN算法实现" class="headerlink" title="KNN算法实现"></a>KNN算法实现</h2><pre><code>import numpy as np
+import matplotlib.pyplot as plt
 
-#optimizer,定义一个优化器，使用梯度下降优化方法
-optimizer = tf.train.GradientDescentOptimizer(0.01)
-#优化器最小化loss
-train = optimizer.minimize(loss)
+# 初始化模拟数据
+# X_train 为样本点
+X_train = np.array([[2, 1],[3, 2],[4, 2],[1, 3],[1.5, 4],[1.7, 3],[2.6, 5],[3.4, 3],
+                    [3, 6],[1, 7],[4, 5],[1.2, 6],[1.8, 7],[2.2, 8],[3.7, 7],[4.8, 5]])
+# y_train 为样本点标记
+y_train = np.array([0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1])
+# X_test 为测试样本
+X_test = np.array([3.2, 5.4])
+# k 为邻居数
+k = 3
 
-#training data
-x_train = [1,2,3,4]
-y_train = [0,-1,-2,-3]
+# 这里的距离公式采用欧式距离
+square_ = (X_train - X_test) ** 2
+square_sum = square_.sum(axis=1) ** 0.5
+# 根据距离大小排序并找到 测试样本 与 所有样本k个最近的样本的序列
+square_sum_sort = square_sum.argsort()
+small_k = square_sum_sort[:k]
+# K近邻用于分类则统计K个邻居分别属于哪类的个数，用于回归则计算K个邻居的y的平均值作为预测结果
+# 统计距离最近的k个样本 分别属于哪一类的个数 别返回个数最多一类的序列 作为预测结果
+y_test_sum = np.bincount(np.array([y_train[i] for i in small_k])).argsort()
+# 打印预测结果
+print(&apos;predict: class {}&apos;.format(y_test_sum[-1]))
 
-#training loop
-init = tf.global_variables_initializer()
-sess = tf.Session()
-sess.run(init) # reset values to wrong
+# 将数据可视化 更生动形象
+# 将 class0 一类的样本点 放到 X_train_0中
+X_train_0 = np.array([X_train[i, :] for i in range(len(y_train)) if y_train[i] == 0])
+# 将 class1 一类的样本点 放到 X_train_1中
+X_train_1 = np.array([X_train[i, :] for i in range(len(y_train)) if y_train[i] == 1])
 
-#迭代一千次后，参数已经训练好
-for i in range(1000):
-sess.run(train, {x:x_train, y:y_train})
-
-#送入训练好的参数，求出loss
-#evaluate training accuracy
-curr_W, curr_b, curr_loss = sess.run([W, b, loss], {x:x_train, y:y_train})
-print(&quot;W: %s b: %s loss: %s&quot;%(curr_W, curr_b, curr_loss))</code></pre><p><img src="https://i.loli.net/2019/08/13/OK694EhMBDtCb7H.png" alt="pic2"></p>
-
+# 绘制所有样本点 并采用不同的颜色 分别标记 class0 以及 class1
+plt.scatter(X_train_0[:,0], X_train_0[:,1], c=&apos;g&apos;, marker=&apos;o&apos;, label=&apos;train_class0&apos;)
+plt.scatter(X_train_1[:,0], X_train_1[:,1], c=&apos;m&apos;, marker=&apos;o&apos;, label=&apos;train_class1&apos;)
+if y_test_sum[-1] == 0:
+    test_class = &apos;g&apos;
+elif y_test_sum[-1] == 1:
+    test_class = &apos;m&apos;
+plt.scatter(X_test[0], X_test[1], c=test_class, marker=&apos;*&apos;, s=100, label=&apos;test_class&apos;)
+# 连接 测试样本 与k个近邻
+for i in small_k:
+    plt.plot([X_test[0], X_train[i, :][0]], [X_test[1], X_train[i, :][1]], c=&apos;c&apos;)
+plt.legend(loc=&apos;best&apos;)
+plt.show()</code></pre>
     </div>
 
     
@@ -352,8 +363,8 @@ print(&quot;W: %s b: %s loss: %s&quot;%(curr_W, curr_b, curr_loss))</code></pre>
     <footer class="post-footer">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2019/08/05/jstest/" rel="next" title="我的js学习计划2/30">
-                <i class="fa fa-chevron-left"></i> 我的js学习计划2/30
+              <a href="/2019/08/13/tf_train/" rel="next" title="机器学习的开始">
+                <i class="fa fa-chevron-left"></i> 机器学习的开始
               </a>
             
           </div>
@@ -361,10 +372,6 @@ print(&quot;W: %s b: %s loss: %s&quot;%(curr_W, curr_b, curr_loss))</code></pre>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/2019/08/15/KNN/" rel="prev" title="KNN——机器学习">
-                KNN——机器学习 <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
     </footer>
@@ -529,7 +536,7 @@ print(&quot;W: %s b: %s loss: %s&quot;%(curr_W, curr_b, curr_loss))</code></pre>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tensorflow是什么"><span class="nav-number">1.</span> <span class="nav-text">Tensorflow是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#附带一个本次机器学习的例子"><span class="nav-number">1.1.</span> <span class="nav-text">附带一个本次机器学习的例子</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#KNN是什么"><span class="nav-number">1.</span> <span class="nav-text">KNN是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KNN算法实现"><span class="nav-number">2.</span> <span class="nav-text">KNN算法实现</span></a></li></ol></div>
             
 
           </div>
