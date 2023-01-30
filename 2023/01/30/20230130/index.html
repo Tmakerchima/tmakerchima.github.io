@@ -57,21 +57,24 @@
   };
 </script>
 
-  <meta name="description" content="document.querySelector的用法">
+  <meta name="description" content="基本概念最长公共子序列和最长公共子串不同 递归原理 递归公式假设我们用c[i,j]表示Xi 和 Yj 的LCS的长度（直接保存最长公共子序列的中间结果不现实，需要先借助LCS的长度）。其中X = {x1 … xm}，Y ={y1…yn}，Xi = {x1 … xi}，Yj={y1… yj}。可得递归公式如下： 案例推导 最长公共子序列 LCS解法其中最长的公共子序列长度为dp[n][m] 1234">
 <meta name="keywords" content="easy to clee happy life">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的js学习计划2&#x2F;30">
-<meta property="og:url" content="http://yoursite.com/2019/08/05/jstest/index.html">
+<meta property="og:title" content="最长公共子序列 LCS">
+<meta property="og:url" content="http://yoursite.com/2023/01/30/20230130/index.html">
 <meta property="og:site_name" content="saber~">
-<meta property="og:description" content="document.querySelector的用法">
+<meta property="og:description" content="基本概念最长公共子序列和最长公共子串不同 递归原理 递归公式假设我们用c[i,j]表示Xi 和 Yj 的LCS的长度（直接保存最长公共子序列的中间结果不现实，需要先借助LCS的长度）。其中X = {x1 … xm}，Y ={y1…yn}，Xi = {x1 … xi}，Yj={y1… yj}。可得递归公式如下： 案例推导 最长公共子序列 LCS解法其中最长的公共子序列长度为dp[n][m] 1234">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/08/05/g5XwQe2uN3FAO9q.png">
-<meta property="og:updated_time" content="2019-08-05T07:15:29.098Z">
+<meta property="og:image" content="https://s2.loli.net/2023/01/30/2qgXwA7WaNYofkE.png">
+<meta property="og:image" content="https://s2.loli.net/2023/01/30/HhwIJ6GeqlDzkc3.png">
+<meta property="og:image" content="https://s2.loli.net/2023/01/30/wXLtBU4km2C5Pfy.png">
+<meta property="og:image" content="https://s2.loli.net/2023/01/30/dIG8sNicRA3BqpM.png">
+<meta property="og:updated_time" content="2023-01-30T09:47:02.873Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的js学习计划2&#x2F;30">
-<meta name="twitter:description" content="document.querySelector的用法">
-<meta name="twitter:image" content="https://i.loli.net/2019/08/05/g5XwQe2uN3FAO9q.png">
-  <link rel="canonical" href="http://yoursite.com/2019/08/05/jstest/">
+<meta name="twitter:title" content="最长公共子序列 LCS">
+<meta name="twitter:description" content="基本概念最长公共子序列和最长公共子串不同 递归原理 递归公式假设我们用c[i,j]表示Xi 和 Yj 的LCS的长度（直接保存最长公共子序列的中间结果不现实，需要先借助LCS的长度）。其中X = {x1 … xm}，Y ={y1…yn}，Xi = {x1 … xi}，Yj={y1… yj}。可得递归公式如下： 案例推导 最长公共子序列 LCS解法其中最长的公共子序列长度为dp[n][m] 1234">
+<meta name="twitter:image" content="https://s2.loli.net/2023/01/30/2qgXwA7WaNYofkE.png">
+  <link rel="canonical" href="http://yoursite.com/2023/01/30/20230130/">
 
 
 <script id="page.configurations">
@@ -80,7 +83,7 @@
   };
 </script>
 
-  <title>我的js学习计划2/30 | saber~</title>
+  <title>最长公共子序列 LCS | saber~</title>
   
 
 
@@ -246,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/jstest/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/01/30/20230130/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="machi">
@@ -260,7 +263,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">我的js学习计划2/30
+          <h1 class="post-title" itemprop="name headline">最长公共子序列 LCS
 
               
             
@@ -280,7 +283,7 @@
                 
               
 
-              <time title="创建时间：2019-08-05 15:10:25 / 修改时间：15:15:29" itemprop="dateCreated datePublished" datetime="2019-08-05T15:10:25+08:00">2019-08-05</time>
+              <time title="创建时间：2023-01-30 17:26:02 / 修改时间：17:47:02" itemprop="dateCreated datePublished" datetime="2023-01-30T17:26:02+08:00">2023-01-30</time>
             </span>
           
             
@@ -308,7 +311,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="document-querySelector的用法"><a href="#document-querySelector的用法" class="headerlink" title="document.querySelector的用法"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelector" target="_blank" rel="noopener">document.querySelector</a>的用法</h2><p><img src="https://i.loli.net/2019/08/05/g5XwQe2uN3FAO9q.png" alt="pic1"></p>
+        <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="最长公共子序列和最长公共子串不同"><a href="#最长公共子序列和最长公共子串不同" class="headerlink" title="最长公共子序列和最长公共子串不同"></a>最长公共子序列和最长公共子串不同</h3><p><img src="https://s2.loli.net/2023/01/30/2qgXwA7WaNYofkE.png" alt="TQV4F2Z`K_I__3`EL_0P__3.png"></p>
+<h2 id="递归原理"><a href="#递归原理" class="headerlink" title="递归原理"></a>递归原理</h2><p><img src="https://s2.loli.net/2023/01/30/HhwIJ6GeqlDzkc3.png" alt="_F_8_ME22LLWT_II8_C79DH.png"></p>
+<h2 id="递归公式"><a href="#递归公式" class="headerlink" title="递归公式"></a>递归公式</h2><p>假设我们用c[i,j]表示Xi 和 Yj 的LCS的长度（直接保存最长公共子序列的中间结果不现实，需要先借助LCS的长度）。其中X = {x1 … xm}，Y ={y1…yn}，Xi = {x1 … xi}，Yj={y1… yj}。可得递归公式如下：<br><img src="https://s2.loli.net/2023/01/30/wXLtBU4km2C5Pfy.png" alt="6NCATV8_558UEHX__J16_NJ.png"></p>
+<h2 id="案例推导"><a href="#案例推导" class="headerlink" title="案例推导"></a>案例推导</h2><p><img src="https://s2.loli.net/2023/01/30/dIG8sNicRA3BqpM.png" alt="I27G9X_RSB1AHM7ALT_SBDG.png"></p>
+<h2 id="最长公共子序列-LCS解法"><a href="#最长公共子序列-LCS解法" class="headerlink" title="最长公共子序列 LCS解法"></a>最长公共子序列 LCS解法</h2><p>其中最长的公共子序列长度为dp[n][m]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int longestCommonSubsequence(String text1, String text2) &#123;</span><br><span class="line">        int n = text1.length(); </span><br><span class="line">        int m = text2.length();</span><br><span class="line">        int[][] dp = new int[n+1][m+1];</span><br><span class="line">        for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">            char c1 = text1.charAt(i-1);</span><br><span class="line">            for(int j=1;j&lt;=m;j++)&#123;</span><br><span class="line">                char c2 = text2.charAt(j-1);</span><br><span class="line">                if(c1==c2)&#123;</span><br><span class="line">                    dp[i][j] = dp[i-1][j-1]+1; </span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    dp[i][j] = Math.max(dp[i][j-1],dp[i-1][j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return dp[n][m];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -319,8 +328,8 @@
     <footer class="post-footer">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2019/08/02/esse/" rel="next" title="hello hexo">
-                <i class="fa fa-chevron-left"></i> hello hexo
+              <a href="/2022/12/23/20221223/" rel="next" title="今天是我的生日">
+                <i class="fa fa-chevron-left"></i> 今天是我的生日
               </a>
             
           </div>
@@ -328,10 +337,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/2019/08/13/tf_train/" rel="prev" title="机器学习的开始">
-                机器学习的开始 <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
     </footer>
@@ -496,7 +501,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#document-querySelector的用法"><span class="nav-number">1.</span> <span class="nav-text">document.querySelector的用法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最长公共子序列和最长公共子串不同"><span class="nav-number">1.1.</span> <span class="nav-text">最长公共子序列和最长公共子串不同</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归原理"><span class="nav-number">2.</span> <span class="nav-text">递归原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归公式"><span class="nav-number">3.</span> <span class="nav-text">递归公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例推导"><span class="nav-number">4.</span> <span class="nav-text">案例推导</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最长公共子序列-LCS解法"><span class="nav-number">5.</span> <span class="nav-text">最长公共子序列 LCS解法</span></a></li></ol></div>
             
 
           </div>

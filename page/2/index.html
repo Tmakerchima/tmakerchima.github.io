@@ -239,6 +239,90 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/06/25/csgo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="machi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/saber_cute.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="saber~">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2021/06/25/csgo/" class="post-title-link" itemprop="url">happy time</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2021-06-25 08:00:25 / 修改时间：08:15:57" itemprop="dateCreated datePublished" datetime="2021-06-25T08:00:25+08:00">2021-06-25</time>
+            </span>
+          
+            
+
+            
+          
+
+          <br>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h4 id="CSGO"><a href="#CSGO" class="headerlink" title="CSGO!"></a>CSGO!</h4><p>csgo! let’s go！</p>
+<iframe src="//player.bilibili.com/player.html?bvid=BV1kt411H74b&cid=71561099&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" width="100%" height="100%"></iframe>
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/06/25/yaha/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -993,134 +1077,6 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/15/KNN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="machi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/saber_cute.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="saber~">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/15/KNN/" class="post-title-link" itemprop="url">KNN——机器学习</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-15 13:38:04 / 修改时间：13:37:56" itemprop="dateCreated datePublished" datetime="2019-08-15T13:38:04+08:00">2019-08-15</time>
-            </span>
-          
-            
-
-            
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h2 id="KNN是什么"><a href="#KNN是什么" class="headerlink" title="KNN是什么"></a>KNN是什么</h2><p>K最近邻(k-Nearest Neighbor，KNN)分类算法，是一个理论上比较成熟的方法，也是最简单的机器学习算法之一。该方法的思路是：如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。<br><img src="https://i.loli.net/2019/08/15/FoXnVIvSkwNmW6E.png" alt="KNN"></p>
-<h2 id="KNN算法实现"><a href="#KNN算法实现" class="headerlink" title="KNN算法实现"></a>KNN算法实现</h2><pre><code>import numpy as np
-import matplotlib.pyplot as plt
-
-# 初始化模拟数据
-# X_train 为样本点
-X_train = np.array([[2, 1],[3, 2],[4, 2],[1, 3],[1.5, 4],[1.7, 3],[2.6, 5],[3.4, 3],
-                    [3, 6],[1, 7],[4, 5],[1.2, 6],[1.8, 7],[2.2, 8],[3.7, 7],[4.8, 5]])
-# y_train 为样本点标记
-y_train = np.array([0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1])
-# X_test 为测试样本
-X_test = np.array([3.2, 5.4])
-# k 为邻居数
-k = 3
-
-# 这里的距离公式采用欧式距离
-square_ = (X_train - X_test) ** 2
-square_sum = square_.sum(axis=1) ** 0.5
-# 根据距离大小排序并找到 测试样本 与 所有样本k个最近的样本的序列
-square_sum_sort = square_sum.argsort()
-small_k = square_sum_sort[:k]
-# K近邻用于分类则统计K个邻居分别属于哪类的个数，用于回归则计算K个邻居的y的平均值作为预测结果
-# 统计距离最近的k个样本 分别属于哪一类的个数 别返回个数最多一类的序列 作为预测结果
-y_test_sum = np.bincount(np.array([y_train[i] for i in small_k])).argsort()
-# 打印预测结果
-print(&apos;predict: class {}&apos;.format(y_test_sum[-1]))
-
-# 将数据可视化 更生动形象
-# 将 class0 一类的样本点 放到 X_train_0中
-X_train_0 = np.array([X_train[i, :] for i in range(len(y_train)) if y_train[i] == 0])
-# 将 class1 一类的样本点 放到 X_train_1中
-X_train_1 = np.array([X_train[i, :] for i in range(len(y_train)) if y_train[i] == 1])
-
-# 绘制所有样本点 并采用不同的颜色 分别标记 class0 以及 class1
-plt.scatter(X_train_0[:,0], X_train_0[:,1], c=&apos;g&apos;, marker=&apos;o&apos;, label=&apos;train_class0&apos;)
-plt.scatter(X_train_1[:,0], X_train_1[:,1], c=&apos;m&apos;, marker=&apos;o&apos;, label=&apos;train_class1&apos;)
-if y_test_sum[-1] == 0:
-    test_class = &apos;g&apos;
-elif y_test_sum[-1] == 1:
-    test_class = &apos;m&apos;
-plt.scatter(X_test[0], X_test[1], c=test_class, marker=&apos;*&apos;, s=100, label=&apos;test_class&apos;)
-# 连接 测试样本 与k个近邻
-for i in small_k:
-    plt.plot([X_test[0], X_train[i, :][0]], [X_test[1], X_train[i, :][1]], c=&apos;c&apos;)
-plt.legend(loc=&apos;best&apos;)
-plt.show()</code></pre>
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
@@ -1162,7 +1118,7 @@ plt.show()</code></pre>
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1272,7 +1228,7 @@ plt.show()</code></pre>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
